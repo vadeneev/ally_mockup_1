@@ -1,0 +1,26 @@
+{
+  "name": "ally_mockup_1",
+  "version": "1.0.0",
+  "description": "Ally mockup implementation",
+  "main": "index.js",
+  "scripts": {
+    "build:styles": "sass src/styles/index.scss build/assets/styles.css",
+    "build:html": "cp src/html/index.html build/index.html",
+    "build:public": "cp public build/assets",
+    "clean:build": "rm -rf build",
+    "build": "npm run clean:build && npm run build:styles && npm run build:html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vadeneev/ally_mockup_1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vadeneev/ally_mockup_1/issues"
+  },
+  "homepage": "https://github.com/vadeneev/ally_mockup_1#readme",
+  "dependencies": {
+    "sass": "1.32.7"
+  }
+}
