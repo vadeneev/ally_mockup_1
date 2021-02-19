@@ -10,7 +10,25 @@
     <link rel="stylesheet" href="./styles/index.css"/>
 </head>
 <body>
-<a href="#main" class="skipLink">Skip to main</a>
+    <a href="#main" class="skipLink btn btn__link">Skip to main</a>
+    <header class="headerDocument layout">
+        <a href="/" aria-label="Main page"><img src="./images/logo.png" class="headerDocument__home-img"
+                                                                                               alt=""
+                                                                                               role="presentation"></a>
+        <div class="headerDocument__controls">
+            <input class="headerDocument__search" type="text" name="search" aria-label="Search site content">
+            <nav aria-label="Choose language" class="headerDocument__menu">
+                <span class="btn" role="menuitem" aria-current="true" aria-label="Текущий язык: Русский" tabindex="0">RU</span>
+                <a class="btn btn__link" role="menuitem" href="/en/" aria-label="English" hreflang="en">EN</a>
+            </nav>
+            <button class="btn btn--clean btn--shrink js-user-menu" aria-label="Open login modal window">
+                <img src="./images/user-icon.png" alt="" role="presentation" class="headerDocument__user-img"/>
+            </button>
+        </div>
+    </header>
 
+    <main id="main" class="mainContent">
+
+    </main>
 </body>
 </html>

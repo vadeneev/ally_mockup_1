@@ -1,0 +1,28 @@
+.btn {
+  border: 1px solid var(--soft-background);
+  background-color: var(--soft-background);
+  border-radius: 2px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+
+  &--shrink {
+    padding: 0.3rem;
+  }
+
+  &--wide {
+    padding: 1.5rem 1rem;
+  }
+
+  &--clean {
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  &__link {
+    color: var(--main-dark);
+
+    &:hover, &:focus {
+      color: var(--color-attention);
+    }
+  }
+}
