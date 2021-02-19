@@ -1,0 +1,12 @@
+.skipLink {
+  position: absolute;
+  top: -50px;
+  left: 50px;
+  border: 1px solid var(--soft-background);
+  background-color: var(--soft-background);
+  padding: 14px 40px;
+
+  &:focus, &:hover {
+    top: 50px;
+  }
+}
