@@ -16,9 +16,14 @@
                                                                                                alt=""
                                                                                                role="presentation"></a>
         <div class="headerDocument__controls">
-            <input class="headerDocument__search" type="text" name="search" aria-label="Search site content">
+            <form action="/search">
+                <div class="inputField">
+                    <label id="searchLabel" for="searchText" class="inputField__label">Поиск по сайту</label>
+                    <input id="searchText" class="inputField__text-input" type="text" name="text" aria-labelledby="searchLabel">
+                </div>
+            </form>
             <nav aria-label="Choose language" class="headerDocument__menu">
-                <span class="btn" role="menuitem" aria-current="true" aria-label="Текущий язык: Русский" tabindex="0">RU</span>
+                <span class="btn" role="menuitem" aria-selected="true" aria-label="Русский">RU</span>
                 <a class="btn btn__link" role="menuitem" href="/en/" aria-label="English" hreflang="en">EN</a>
             </nav>
             <button class="btn btn--clean btn--shrink js-user-menu" aria-label="Open login modal window">
