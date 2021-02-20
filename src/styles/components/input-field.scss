@@ -1,25 +1,18 @@
 .inputField {
   position: relative;
 
+  &:after {
+    // TODO: add zoom icon
+    content: url("./images/icon-zoom.png");
+    position: absolute;
+    right: 10px;
+  }
+
   &:focus-within, &:active {
     .inputField__label {
       top: -1.5rem;
       bottom: auto;
       transform: none;
-    }
-  }
-
-  &__label {
-    position: absolute;
-    left: 10px;
-    top: 0.65rem;
-    margin: auto;
-    z-index: 1;
-    transition: top 0.2s ease-in-out;
-    pointer-events: none;
-
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
     }
   }
 

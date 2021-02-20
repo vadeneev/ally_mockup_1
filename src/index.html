@@ -12,19 +12,18 @@
 <body>
     <a href="#main" class="skipLink btn btn__link">Skip to main</a>
     <header class="headerDocument layout">
-        <a href="/" aria-labelledby="homePageLink"><img src="./images/logo.png" class="headerDocument__home-img"
-                                                                                               alt=""
-                                                                                               role="presentation"></a>
+        <a href="/" aria-labelledby="homePageLink">
+            <img src="./images/logo.png" class="headerDocument__home-img" alt="" role="presentation">
+        </a>
         <div class="headerDocument__controls">
             <form action="/search">
                 <div class="inputField">
-                    <label id="searchLabel" for="searchText" class="inputField__label">Поиск по сайту</label>
-                    <input id="searchText" class="inputField__text-input" type="text" name="text" aria-labelledby="searchLabel">
+                    <input id="searchText" placeholder="Поиск по сайту" class="inputField__text-input" type="text" name="text" aria-labelledby="searchLabel" aria-describedby="formWithoutButton">
                 </div>
             </form>
             <nav aria-labelledby="languageMenu" class="headerDocument__menu">
-                <span class="btn" role="menuitem" aria-selected="true" lang="ru" aria-labelledby="languageMenuItemRu">RU</span>
-                <a class="btn btn__link" role="menuitem" href="/en/" aria-labelledby="languageMenuItemEn" lang="en" hreflang="en">EN</a>
+                <span class="btn btn--passive btn--soft-rounded" role="menuitem" aria-selected="true" lang="ru" aria-labelledby="languageMenuItemRu">RU</span>
+                <a class="btn btn__link btn--secondary btn--soft-rounded" role="menuitem" href="/en/" aria-labelledby="languageMenuItemEn" lang="en" hreflang="en">EN</a>
             </nav>
             <button class="btn btn--clean btn--shrink js-user-menu" aria-labelledby="signInBtnLabel" aria-describedby="signInBtnDescription">
                 <img src="./images/user-icon.png" alt="" role="presentation" class="headerDocument__user-img"/>
@@ -32,17 +31,69 @@
         </div>
     </header>
 
+    <nav aria-labelledby="siteAnchorNavigation" class="navigation layout">
+        <a class="link" href="#museum">Музей</a>
+        <a class="link" href="/visitors">Посетителям</a>
+        <a class="link" href="#exhibitions">Выставки и события</a>
+    </nav>
+
+    <div role="group" aria-roledescription="carousel"></div>
+
+    <nav lass="navigation layout" aria-labelledby="siteNavigation" class="navigation layout">
+        <a class="btn" href="/shop/tickets">Купить билет</a>
+        <a class="btn" href="/collaboration">Стать другом</a>
+        <a class="btn" href="/shop">Онлайн-магазин</a>
+    </nav>
+
     <main id="main" class="mainContent">
+        <secion id="exhibitions" class="layout">
+            <h2>Выставки и события</h2>
+            <div role="tablist" aria-labelledby="selectTabEvents" class="navigation js-tabs-events">
+                <button role="tab" aria-controls="exhbAll" aria-selected="true" id="eventsAll" class="btn btn--clean btn--passive">Все</button>
+                <button role="tab" aria-controls="exhbToday" aria-selected="false" id="eventsToday" class="btn">Сегодня</button>
+                <button role="tab" aria-controls="exhbTomorrow" aria-selected="false" id="eventsTomorrow" class="btn">Завтра</button>
+            </div>
+
+            <div role="list" id="exhbAll" tabindex="0" class="layout cardsLayout" aria-labelledby="exhibitionCards">
+                <div class="cardItem" tabindex="0" role="listitem">
+                    <img class="cardItem__main-img" src="./images/durer-matiss.png" alt="Картина Святослава Рихтера" />
+                    <h3>Святослав рихтер в кругу друзей. Москва - Коктебель</h3>
+                    <p class="cardItem__semi-header">Выставка до 20 ноября</p>
+                    <p class="cardItem__main-text">Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее.</p>
+                    <a class="link" href="/shop/tickets/123" aria-labelledby="buyTicketsRichter">Купить билет</a>
+                </div>
+            </div>
+            <div role="tabpanel" id="exhbToday" hidden="hidden" tabindex="0" class="layout">
+                Нет контента
+            </div>
+            <div role="tabpanel" id="exhbTomorrow" hidden="hidden" tabindex="0" class="layout">
+                Нет контента
+            </div>
+
+
+        </secion>
 
     </main>
 
+    <!--Labels-->
     <div style="display: none">
         <span id="homePageLink">Главная страница</span>
+        <span id="searchLabel">Поиск по сайту</span>
         <span id="languageMenu">Выберите язык</span>
         <span id="languageMenuItemRu">Русский</span>
         <span id="languageMenuItemEn">English</span>
         <span id="signInBtnLabel">Аутентификации пользователя</span>
+        <span id="siteNavigation">Основные разделы сайта</span>
+        <span id="selectTabEvents">Даты выставок и событий</span>
+        <span id="siteAnchorNavigation">Основные разделы страницы</span>
+        <span id="exhibitionCards">Краткая информация о выставках и событиях</span>
+        <span id="buyTicketsRichter">Купить билет на выставку Святослава Рихтера</span>
+    </div>
+    <!--Descriptions-->
+    <div style="display: none">
         <span id="signInBtnDescription">Открывает модальное окно</span>
+        <span id="formWithoutButton">После ввода текста, нажмите клавишу Enter</span>
+        <span id="fetchResource">После нажатия произойдёт загрузка информации</span>
     </div>
 </body>
 </html>
