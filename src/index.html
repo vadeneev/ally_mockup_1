@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -12,7 +12,7 @@
 <body>
     <a href="#main" class="skipLink btn btn__link">Skip to main</a>
     <header class="headerDocument layout">
-        <a href="/" aria-label="Main page"><img src="./images/logo.png" class="headerDocument__home-img"
+        <a href="/" aria-labelledby="homePageLink"><img src="./images/logo.png" class="headerDocument__home-img"
                                                                                                alt=""
                                                                                                role="presentation"></a>
         <div class="headerDocument__controls">
@@ -22,11 +22,11 @@
                     <input id="searchText" class="inputField__text-input" type="text" name="text" aria-labelledby="searchLabel">
                 </div>
             </form>
-            <nav aria-label="Choose language" class="headerDocument__menu">
-                <span class="btn" role="menuitem" aria-selected="true" aria-label="Русский">RU</span>
-                <a class="btn btn__link" role="menuitem" href="/en/" aria-label="English" hreflang="en">EN</a>
+            <nav aria-labelledby="languageMenu" class="headerDocument__menu">
+                <span class="btn" role="menuitem" aria-selected="true" lang="ru" aria-labelledby="languageMenuItemRu">RU</span>
+                <a class="btn btn__link" role="menuitem" href="/en/" aria-labelledby="languageMenuItemEn" lang="en" hreflang="en">EN</a>
             </nav>
-            <button class="btn btn--clean btn--shrink js-user-menu" aria-label="Open login modal window">
+            <button class="btn btn--clean btn--shrink js-user-menu" aria-labelledby="signInBtnLabel" aria-describedby="signInBtnDescription">
                 <img src="./images/user-icon.png" alt="" role="presentation" class="headerDocument__user-img"/>
             </button>
         </div>
@@ -35,5 +35,14 @@
     <main id="main" class="mainContent">
 
     </main>
+
+    <div style="display: none">
+        <span id="homePageLink">Главная страница</span>
+        <span id="languageMenu">Выберите язык</span>
+        <span id="languageMenuItemRu">Русский</span>
+        <span id="languageMenuItemEn">English</span>
+        <span id="signInBtnLabel">Аутентификации пользователя</span>
+        <span id="signInBtnDescription">Открывает модальное окно</span>
+    </div>
 </body>
 </html>
