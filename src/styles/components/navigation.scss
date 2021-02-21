@@ -1,0 +1,9 @@
+.navigation {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+
+  &--padded {
+    padding: 1rem 0;
+  }
+}

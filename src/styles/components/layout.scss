@@ -1,0 +1,17 @@
+.layout {
+  width: 1030px;
+  max-width: calc(100vw - 30px);
+  margin: 15px auto;
+
+  &__column {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  &--two-columns {
+    display: flex;
+    flex-flow: wrap;
+  }
+}

@@ -1,0 +1,36 @@
+.inputField {
+  position: relative;
+
+  &:after {
+    // TODO: add zoom icon
+    content: url("./images/icon-zoom.png");
+    position: absolute;
+    right: 10px;
+  }
+
+  &:focus-within, &:active {
+    .inputField__label {
+      top: -1.5rem;
+      bottom: auto;
+      transform: none;
+    }
+  }
+
+  &__text-input {
+    position: relative;
+    height: 2rem;
+    width: 250px;
+    border-radius: 20px;
+    padding: 0 1rem;
+    border-color: var(--soft-background);
+    background-color: #f6f6f6;
+  }
+
+  &--decorated {
+    width: 250px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 5px;
+  }
+}

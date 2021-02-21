@@ -1,0 +1,22 @@
+.headerDocument {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0;
+  flex-flow: wrap;
+
+  &__home-img {
+    width: 200px;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-flow: wrap;
+  }
+
+  &__user-img {
+    width: 2.5rem;
+  }
+}

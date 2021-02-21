@@ -1,0 +1,72 @@
+.btn {
+  border: 1px solid var(--soft-background);
+  background-color: var(--soft-background);
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-main-text);
+
+  &:hover, &:focus, &:active {
+    border-color: var(--color-main-text);
+    color: var(--color-attention);
+  }
+
+  &[disabled] {
+    cursor: initial;
+    opacity: 0.3;
+    border: inherit;
+  }
+
+  &--soft-rounded {
+    border-radius: 2px;
+  }
+
+  &--passive {
+    cursor: initial;
+
+    &:hover, &:focus, &:active {
+      border: 1px solid var(--soft-background);
+      background-color: var(--soft-background);
+      color: var(--color-main-text);
+    }
+  }
+
+  &--shrink {
+    padding: 0.3rem;
+  }
+
+  &--wide {
+    padding: 1.5rem 1rem;
+  }
+
+  &--clean {
+    border-color: transparent;
+    background-color: transparent;
+
+    &:hover, &:focus, &:active {
+      border-color: transparent;
+      background-color: transparent;
+      color: var(--color-main-text);
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover, &:focus, &:active {
+      border-color: var(--soft-background);
+      background-color: var(--soft-background);
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: var(--main-dark);
+
+    &:hover, &:focus {
+      color: var(--color-attention);
+    }
+  }
+}
