@@ -1,3 +1,7 @@
-import { Tabs } from './tabs';
+import * as loginModal from './features/login-modal-feature'
 
-const tab = new Tabs();
+document.addEventListener('DOMContentLoaded', init)
+
+function init() {
+    loginModal.init();
+}

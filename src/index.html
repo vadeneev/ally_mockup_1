@@ -171,16 +171,22 @@
         <span id="externalLink">Переход на внешний ресурс в новом окне</span>
     </div>
 
-    <div class="fullscreen-wrapper js-modal-wrapper" hidden="hidden" aria-hidden="true">
-        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginModal" tabindex="0">
+    <div class="fullscreen-wrapper js-modal-wrapper hidden" aria-hidden="true">
+        <div class="modal js-modal-first-focus" role="dialog" aria-modal="true" aria-labelledby="loginModal" tabindex="0">
             <h2>Вход</h2>
-            <form>
-                <input name="login"placeholder="Логин"/>
-                <input name="pass" type="password" placeholder="Пароль"/>
+            <form class="modal__form">
+                <div class="modal__input-group">
+                    <label for="loginInput">Логин</label>
+                    <input class="modal__input" id="loginInput" name="login"placeholder="Логин"/>
+                </div>
+                <div class="modal__input-group">
+                    <label for="passInput">Пароль</label>
+                    <input class="modal__input" id="passInput" name="pass" type="password" placeholder="Пароль"/>
+                </div>
 
                 <div class="modal__controls">
-                    <button class="btn">Войти</button>
-                    <button class="btn">Закрыть</button>
+                    <button class="btn js-modal-submit">Войти</button>
+                    <button class="btn js-modal-close js-modal-last-focus">Закрыть</button>
                 </div>
             </form>
         </div>
