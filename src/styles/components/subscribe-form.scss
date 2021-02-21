@@ -1,0 +1,11 @@
+.subscribeForm {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}

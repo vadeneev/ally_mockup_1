@@ -25,4 +25,12 @@
     border-color: var(--soft-background);
     background-color: #f6f6f6;
   }
+
+  &--decorated {
+    width: 250px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 5px;
+  }
 }
