@@ -12,6 +12,12 @@
     color: var(--color-attention);
   }
 
+  &[disabled] {
+    cursor: initial;
+    opacity: 0.3;
+    border: inherit;
+  }
+
   &--soft-rounded {
     border-radius: 2px;
   }

@@ -18,6 +18,7 @@ export class Modal {
             whenHandleOk,
             restTopLevelElements,
             triggerElement,
+            onClose,
         } = props;
 
         this.modalWrapperElement = modalWrapperElement;
@@ -25,6 +26,7 @@ export class Modal {
         this.firstFocusElement = firstFocusElement;
         this.lastFocusElement = lastFocusElement;
         this.okButton = okButton;
+        this.onClose = onClose;
         this.closeButton = closeButton;
         this.whenHandleOk = whenHandleOk;
         this.triggerElement = triggerElement;
@@ -37,8 +39,10 @@ export class Modal {
         this.modalWrapperElement.classList.remove('hidden');
         window.addEventListener('keydown', this.handleKeyPressed);
         this.closeButton.addEventListener('click', this.handleCloseClick);
+        this.okButton.addEventListener('click', this.handleOkClick);
         this.firstFocusElement.focus();
         document.body.classList.add('no-scroll');
+        this.modalWrapperElement.addEventListener('click', this.handleWrapperClick);
     }
 
     close = () => {
@@ -49,6 +53,22 @@ export class Modal {
         this.closeButton.removeEventListener('click', this.handleCloseClick);
         this.triggerElement.focus();
         document.body.classList.remove('no-scroll');
+        this.okButton.removeEventListener('click', this.handleOkClick);
+        this.onClose?.();
+        this.modalWrapperElement.removeEventListener('click', this.handleWrapperClick);
+    }
+
+    handleWrapperClick = ({ target }) => {
+        if (target === this.modalWrapperElement) {
+            this.close();
+        }
+    }
+
+    handleOkClick = (event) => {
+        event.preventDefault();
+
+        return this.whenHandleOk?.()
+            .then(() => this.close());
     }
 
     handleCloseClick = (event) => {
