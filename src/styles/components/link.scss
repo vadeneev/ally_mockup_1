@@ -4,4 +4,8 @@
   &:hover, &:focus, &:active {
     color: var(--color-attention);
   }
+
+  &--padded {
+    margin: 0.5rem 0;
+  }
 }

@@ -1,8 +1,22 @@
 .cardItem {
   flex: 0 0 30%;
 
-
   &__main-img {
     height: 150px;
+    min-height: 150px;
+  }
+
+  &__main-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  &__semi-header {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
   }
 }
