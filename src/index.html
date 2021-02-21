@@ -161,6 +161,7 @@
         <span id="buyTicketsDurer">Купить билет на выставку от Дюрера до Матисса</span>
         <span id="moreOnline">Узнать больше о виртуальных мероприятиях</span>
         <span id="donateLabel">Страница о спонсорстве для музея</span>
+        <span id="loginModal">Окно ввода логина и пароля</span>
     </div>
     <!--Descriptions-->
     <div style="display: none">
@@ -168,6 +169,21 @@
         <span id="formWithoutButton">После ввода текста, нажмите клавишу Enter</span>
         <span id="fetchResource">После нажатия произойдёт загрузка информации</span>
         <span id="externalLink">Переход на внешний ресурс в новом окне</span>
+    </div>
+
+    <div class="fullscreen-wrapper js-modal-wrapper" hidden="hidden" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginModal" tabindex="0">
+            <h2>Вход</h2>
+            <form>
+                <input name="login"placeholder="Логин"/>
+                <input name="pass" type="password" placeholder="Пароль"/>
+
+                <div class="modal__controls">
+                    <button class="btn">Войти</button>
+                    <button class="btn">Закрыть</button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
