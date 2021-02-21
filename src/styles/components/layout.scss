@@ -4,13 +4,14 @@
   margin: 15px auto;
 
   &__column {
+    flex: 1;
     display: flex;
     flex-flow: column;
     align-items: flex-start;
   }
 
   &--two-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-flow: wrap;
   }
 }
