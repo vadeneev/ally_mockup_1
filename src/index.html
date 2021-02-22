@@ -38,13 +38,13 @@
     </nav>
 
     <div role="group" aria-roledescription="carousel" class="carousel layout layout--padded js-carousel">
-        <div role="button" class="carousel__left-control" tabindex="0">
-            <img src="/images/left.svg" role="presentation" class="carousel__ctrl-img js-btn-left" />
+        <div role="button" class="carousel__left-control">
+            <img src="/images/left.svg" aria-controls="carousel" alt="Переместиться на один слайд влево" class="carousel__ctrl-img js-btn-left" tabindex="0"/>
         </div>
-        <div role="button" class="carousel__right-control" tabindex="0">
-            <img src="/images/right.svg" role="presentation" class="carousel__ctrl-img js-btn-right" />
+        <div role="button" class="carousel__right-control">
+            <img src="/images/right.svg" aria-controls="carousel" alt="Переместиться на один слайд вправо" class="carousel__ctrl-img js-btn-right" tabindex="0"/>
         </div>
-        <div class="carousel__wrapper layout" role="menu">
+        <div class="carousel__wrapper layout" role="menu" id="carousel">
             <div class="carousel__slide js-slide slideOne" role="menuitem">
                 <img src="/images/carousel-1.png" class="carousel__img" alt="Играющие на музыкальных инструментах люди">
                 <a class="btn btn--border-hard slideOne__btn" href="/buy/tickets/1" aria-labelledby="buyTicketsDurer">Купить билеты</a>
