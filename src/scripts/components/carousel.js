@@ -15,11 +15,27 @@ export class Carousel {
     init = () => {
         this.scrollLeftBtn.addEventListener('click', this.handleLeftClick);
         this.scrollRightBtn.addEventListener('click', this.handleLRightClick);
+        this.scrollLeftBtn.addEventListener('keypress', this.handleLeftKeyPress);
+        this.scrollRightBtn.addEventListener('keypress', this.handleRightKeyPress);
     }
 
     destroy() {
         this.scrollLeftBtn.removeEventListener('click', this.handleLeftClick);
         this.scrollRightBtn.removeEventListener('click', this.handleLRightClick);
+        this.scrollLeftBtn.removeEventListener('keypress', this.handleLeftKeyPress);
+        this.scrollRightBtn.removeEventListener('keypress', this.handleRightKeyPress);
+    }
+
+    handleLeftKeyPress = ({ key }) => {
+        if (key === 'Enter') {
+            this.handleLeftClick();
+        }
+    }
+
+    handleRightKeyPress = ({ key }) => {
+        if (key === 'Enter') {
+            this.handleLRightClick();
+        }
     }
 
     handleLeftClick = () => {
