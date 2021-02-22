@@ -22,6 +22,11 @@
     border-radius: 2px;
   }
 
+  &--border-hard {
+    border-width: 2px;
+    border-color: var(--main-dark);
+  }
+
   &--passive {
     cursor: initial;
 

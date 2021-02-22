@@ -3,6 +3,10 @@
   max-width: calc(100vw - 30px);
   margin: 15px auto;
 
+  &--padded {
+    width: 1110px;
+  }
+
   &__column {
     flex: 1;
     display: flex;

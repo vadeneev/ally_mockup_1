@@ -21,10 +21,13 @@ export class Form {
     }
 
     init = () => {
-        this.form.addEventListener('submit', this.preventSubmit);
+        this.form.addEventListener('submit', this.handleSubmit);
     }
 
-    preventSubmit = event => event.preventDefault();
+    handleSubmit = event => {
+        event.preventDefault();
+        this.send();
+    }
 
     validate = () => {
         const obj = {}
@@ -56,7 +59,7 @@ export class Form {
 
     showErrors = () => {
         this.errorMessageElements.forEach((element) => {
-            const id = element.getAttribute('for');
+            const id = element.dataset['for'];
             const error = this.errors[window[id].name];
             element.innerText = error || '';
             element.setAttribute('aria-hidden', !Boolean(error));
@@ -78,9 +81,11 @@ export class Form {
         this.form.focus();
         this.inputElements.forEach((element) => {
             element.disabled = value;
+            element.setAttribute('aria-busy', value);
         });
         this.btnElements.forEach((element) => {
             element.disabled = value;
+            element.setAttribute('aria-busy', value);
         });
     }
 

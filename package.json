@@ -4,13 +4,13 @@
   "description": "Ally mockup implementation",
   "main": "index.js",
   "scripts": {
-    "build:styles": "sass src/styles/index.scss docs/styles/index.css",
-    "build:images": "cp -R src/images docs/images",
+    "build:styles": "sass src/styles/index.scss public/styles/index.css",
+    "build:images": "cp -R src/images public/images",
     "build:scripts": "webpack -c webpack.config.js",
-    "build:html": "cp src/index.html docs/index.html",
-    "clean:build": "rm -rf docs",
-    "build": "npm run clean:build && mkdir docs && npm run build:html && npm run build:styles && npm run build:images && npm run build:scripts",
-    "serve": "http-server -o docs"
+    "build:html": "cp src/index.html public/index.html",
+    "clean:build": "rm -rf public",
+    "build": "npm run clean:build && mkdir public && npm run build:html && npm run build:styles && npm run build:images && npm run build:scripts",
+    "serve": "http-server"
   },
   "repository": {
     "type": "git",

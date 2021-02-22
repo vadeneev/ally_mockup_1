@@ -36,7 +36,7 @@ function initComponents() {
         form: document.querySelector('.js-login-form'),
         inputElements: document.querySelectorAll('.js-login-form input'),
         btnElements: document.querySelectorAll('.js-login-form button'),
-        errorMessageElements: document.querySelectorAll('.js-login-form label.error'),
+        errorMessageElements: document.querySelectorAll('.js-login-form .error'),
         alarmContainer: document.querySelector('.js-login-alarm'),
         sendService: services.authenticate
     });
