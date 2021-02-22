@@ -25,7 +25,8 @@ export class Tabs {
 
         this.tabsBtnElements.forEach((element) => {
             element.setAttribute('aria-selected', target === element);
-            element.classList.toggle('btn--clean', target === element);
+            element.classList.toggle('btn--clean', target !== element);
+            element.classList.toggle('btn__link', target !== element);
             element.classList.toggle('btn--passive', target === element);
         });
 
