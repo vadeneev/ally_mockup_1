@@ -413,6 +413,10 @@ body {
 .btn--soft-rounded {
   border-radius: 2px;
 }
+.btn--border-hard {
+  border-width: 2px;
+  border-color: var(--main-dark);
+}
 .btn--passive {
   cursor: initial;
 }
@@ -476,6 +480,9 @@ body {
   width: 1030px;
   max-width: calc(100vw - 30px);
   margin: 15px auto;
+}
+.layout--padded {
+  width: 1110px;
 }
 .layout__column {
   flex: 1;
@@ -654,6 +661,62 @@ body {
   display: flex;
   background-color: rgba(59, 58, 58, 0.7);
   overflow-y: auto;
+}
+
+.carousel {
+  position: relative;
+  height: 630px;
+  min-height: 630px;
+}
+@media screen and (max-width: 800px) {
+  .carousel {
+    height: 530px;
+    min-height: 530px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .carousel {
+    height: 230px;
+    min-height: 230px;
+  }
+}
+.carousel__ctrl-img {
+  width: 30px;
+  cursor: pointer;
+}
+.carousel__img {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+.carousel__left-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 30px;
+  height: 50px;
+  z-index: 1;
+}
+.carousel__right-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 30px;
+  height: 50px;
+  z-index: 1;
+}
+
+.slideOne {
+  position: relative;
+}
+.slideOne__btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,59 @@
+.carousel {
+  position: relative;
+  height: 630px;
+  min-height: 630px;
+
+  @media screen and (max-width: 800px){
+    height: 530px;
+    min-height: 530px;
+  }
+
+  @media screen and (max-width: 500px){
+    height: 230px;
+    min-height: 230px;
+  }
+
+
+  &__ctrl-img {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+
+  &__left-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 30px;
+    height: 50px;
+    z-index: 1;
+  }
+
+  &__right-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 30px;
+    height: 50px;
+    z-index: 1;
+  }
+}
+
+.slideOne {
+  position: relative;
+
+  &__btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+  }
+}

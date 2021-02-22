@@ -37,7 +37,23 @@
         <a class="link" href="#exhibitions">Выставки и события</a>
     </nav>
 
-    <div role="group" aria-roledescription="carousel"></div>
+    <div role="group" aria-roledescription="carousel" class="carousel layout layout--padded js-carousel">
+        <div role="button" class="carousel__left-control" tabindex="0">
+            <img src="/images/left.svg" role="presentation" class="carousel__ctrl-img js-btn-left" />
+        </div>
+        <div role="button" class="carousel__right-control" tabindex="0">
+            <img src="/images/right.svg" role="presentation" class="carousel__ctrl-img js-btn-right" />
+        </div>
+        <div class="carousel__wrapper layout" role="menu">
+            <div class="carousel__slide js-slide slideOne" role="menuitem">
+                <img src="/images/carousel-1.png" class="carousel__img" alt="Играющие на музыкальных инструментах люди">
+                <a class="btn btn--border-hard slideOne__btn" href="/buy/tickets/1" aria-labelledby="buyTicketsDurer">Купить билеты</a>
+            </div>
+            <div class="carousel__slide js-slide hidden" aria-hidden="true" role="menuitem">
+                <img src="/images/carousel-1.png" class="carousel__img" alt="Играющие на музыкальных инструментах люди второй слайд">
+            </div>
+        </div>
+    </div>
 
     <nav lass="navigation layout" aria-labelledby="siteNavigation" class="navigation layout">
         <a class="btn" href="/shop/tickets">Купить билет</a>
