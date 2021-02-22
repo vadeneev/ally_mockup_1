@@ -53,37 +53,54 @@
                 <button role="tab" aria-controls="exhbToday" aria-selected="false" id="eventsToday" class="btn">Сегодня</button>
                 <button role="tab" aria-controls="exhbTomorrow" aria-selected="false" id="eventsTomorrow" class="btn">Завтра</button>
             </div>
-
-            <div role="tabpanel" id="exhbAll" tabindex="0">
-                <div role="list" tabindex="0" class="layout cardsLayout" aria-labelledby="exhibitionCards">
-                    <div class="cardItem" tabindex="0" role="listitem">
-                        <img class="cardItem__main-img" src="/images/richter.png" alt="Картина. Половина изображения зелёного цвета, на второй половине изображён чевлоек." />
-                        <h3>Святослав рихтер в кругу друзей. Москва - Коктебель</h3>
-                        <p class="cardItem__semi-header">Выставка до 20 ноября</p>
-                        <p class="cardItem__main-text">Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее.</p>
-                        <a class="link" href="/shop/tickets/123" aria-labelledby="buyTicketsRichter">Купить билет</a>
-                    </div>
-                    <div class="cardItem" tabindex="0" role="listitem">
-                        <img class="cardItem__main-img" src="/images/tatoo.png" alt="Маска с татуировками по всей поверхности" />
-                        <h3>Тату</h3>
-                        <p class="cardItem__semi-header">Выставка до 17 октября</p>
-                        <p class="cardItem__main-text">Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее.</p>
-                        <a class="link" href="/shop/tickets/234" aria-labelledby="buyTicketsTattoo">Купить билет</a>
-                    </div>
-                    <div class="cardItem" tabindex="0" role="listitem">
-                        <img class="cardItem__main-img" src="/images/durer-matiss.png" alt="Набросок портрета молодой девушки" />
-                        <h3>От Дюрера до Матисса</h3>
-                        <p class="cardItem__semi-header">Выставка до 1 ноября</p>
-                        <p class="cardItem__main-text">Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее.</p>
-                        <a class="link" href="/shop/tickets/345" aria-labelledby="buyTicketsDurer">Купить билет</a>
+            <div class="tabPanels">
+                <div role="tabpanel" id="exhbAll" class="js-tab-content" tabindex="0">
+                    <div role="list" tabindex="0" class="layout cardsLayout" aria-labelledby="exhibitionCards">
+                        <div class="cardItem" tabindex="0" role="listitem">
+                            <img class="cardItem__main-img" src="/images/richter.png" alt="Картина. Половина изображения зелёного цвета, на второй половине изображён чевлоек." />
+                            <h3>Святослав рихтер в кругу друзей. Москва - Коктебель</h3>
+                            <p class="cardItem__semi-header">Выставка до 20 ноября</p>
+                            <p class="cardItem__main-text">Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее.</p>
+                            <a class="link" href="/shop/tickets/123" aria-labelledby="buyTicketsRichter">Купить билет</a>
+                        </div>
+                        <div class="cardItem" tabindex="0" role="listitem">
+                            <img class="cardItem__main-img" src="/images/tatoo.png" alt="Маска с татуировками по всей поверхности" />
+                            <h3>Тату</h3>
+                            <p class="cardItem__semi-header">Выставка до 17 октября</p>
+                            <p class="cardItem__main-text">Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее.</p>
+                            <a class="link" href="/shop/tickets/234" aria-labelledby="buyTicketsTattoo">Купить билет</a>
+                        </div>
+                        <div class="cardItem" tabindex="0" role="listitem">
+                            <img class="cardItem__main-img" src="/images/durer-matiss.png" alt="Набросок портрета молодой девушки" />
+                            <h3>От Дюрера до Матисса</h3>
+                            <p class="cardItem__semi-header">Выставка до 1 ноября</p>
+                            <p class="cardItem__main-text">Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее.</p>
+                            <a class="link" href="/shop/tickets/345" aria-labelledby="buyTicketsDurer">Купить билет</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div role="tabpanel" id="exhbToday" hidden="hidden" tabindex="0" class="layout">
-                Нет контента
-            </div>
-            <div role="tabpanel" id="exhbTomorrow" hidden="hidden" tabindex="0" class="layout">
-                Нет контента
+                <div role="tabpanel" id="exhbToday" aria-hidden="true" tabindex="0" class="hidden js-tab-content">
+                    <div role="list" tabindex="0" class="layout cardsLayout" aria-labelledby="exhibitionCards">
+                        <div class="cardItem" tabindex="0" role="listitem">
+                            <img class="cardItem__main-img" src="/images/richter.png" alt="Картина. Половина изображения зелёного цвета, на второй половине изображён чевлоек." />
+                            <h3>Святослав рихтер в кругу друзей. Москва - Коктебель</h3>
+                            <p class="cardItem__semi-header">Выставка до 20 ноября</p>
+                            <p class="cardItem__main-text">Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее.</p>
+                            <a class="link" href="/shop/tickets/123" aria-labelledby="buyTicketsRichter">Купить билет</a>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" id="exhbTomorrow" aria-hidden="true" tabindex="0" class="hidden js-tab-content">
+                    <div role="list" tabindex="0" class="layout cardsLayout" aria-labelledby="exhibitionCards">
+                        <div class="cardItem" tabindex="0" role="listitem">
+                            <img class="cardItem__main-img" src="/images/durer-matiss.png" alt="Набросок портрета молодой девушки" />
+                            <h3>От Дюрера до Матисса</h3>
+                            <p class="cardItem__semi-header">Выставка до 1 ноября</p>
+                            <p class="cardItem__main-text">Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее. Текст о музее.</p>
+                            <a class="link" href="/shop/tickets/345" aria-labelledby="buyTicketsDurer">Купить билет</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </secion>
 
