@@ -525,6 +525,9 @@ body {
   border-bottom: 1px solid black;
   padding: 5px;
 }
+.inputField__error--short {
+  max-width: 200px;
+}
 
 .link {
   color: var(--color-main-text);
@@ -603,7 +606,7 @@ body {
 }
 .subscribeForm__group {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   flex-flow: wrap;
 }

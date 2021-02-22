@@ -130,9 +130,12 @@
             </nav>
             <div class="layout__column subscribe">
                 <h4 class="subscribe__header">Подписка на новости</h4>
-                <form action="/sendData" class="js-form-subscribe subscribeForm">
+                <form class="js-form-subscribe subscribeForm">
                     <div class="subscribeForm__group">
-                        <input placeholder="E-mail" type="email" class="inputField inputField--decorated"/>
+                        <div>
+                            <input placeholder="E-mail" id="subscribeEmail" name="email" class="inputField inputField--decorated"/>
+                            <div data-for="subscribeEmail" class="error inputField__error--short" aria-hidden="true" aria-live="polite"></div>
+                        </div>
                         <button type="submit" class="btn">Подписаться</button>
                     </div>
                     <div class="subscribeForm__group">
@@ -179,12 +182,12 @@
                 <div class="modal__input-group">
                     <label for="loginInput">Логин</label>
                     <input class="modal__input" id="loginInput" name="login"placeholder="Логин" aria-describedby="loginError"/>
-                    <label aria-live="polite" role="status" for="loginInput" id="loginError" class="error" aria-hidden="true"></label>
+                    <div role="status" aria-live="polite" data-for="loginInput" id="loginError" class="error" aria-hidden="true"></div>
                 </div>
                 <div class="modal__input-group">
                     <label for="passInput">Пароль</label>
                     <input class="modal__input" id="passInput" name="pass" type="password" placeholder="Пароль" aria-describedby="passError"/>
-                    <label aria-live="polite" role="status" for="passInput" id="passError" class="error" aria-hidden="true"></label>
+                    <div role="status" aria-live="polite" data-for="passInput" id="passError" class="error" aria-hidden="true"></div>
                 </div>
 
                 <div class="modal__controls">
