@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Страница музея искусств" />
     <title>Музей</title>
-    <script src="/scripts/bundle.js" defer></script>
-    <link rel="stylesheet" href="/styles/index.css"/>
+    <script src="/scripts/bundle.js?version=1" defer></script>
+    <link rel="stylesheet" href="/styles/index.css?version=1"/>
 </head>
 <body>
     <a href="#main" class="skipLink btn btn__link">Skip to main</a>
@@ -22,8 +23,8 @@
                 </div>
             </form>
             <nav aria-labelledby="languageMenu" class="headerDocument__menu">
-                <span class="btn btn--passive btn--soft-rounded" role="menuitem" aria-selected="true" lang="ru" aria-labelledby="languageMenuItemRu">RU</span>
-                <a class="btn btn__link btn--secondary btn--soft-rounded" role="menuitem" href="/en/" aria-labelledby="languageMenuItemEn" lang="en" hreflang="en">EN</a>
+                <span class="btn btn--passive btn--soft-rounded" aria-current="true" lang="ru" aria-labelledby="languageMenuItemRu">RU</span>
+                <a class="btn btn__link btn--secondary btn--soft-rounded" href="/en/" aria-labelledby="languageMenuItemEn" lang="en" hreflang="en">EN</a>
             </nav>
             <button class="btn btn--clean btn--shrink js-user-menu" aria-labelledby="signInBtnLabel" aria-describedby="signInBtnDescription">
                 <img src="./images/user-icon.png" alt="" role="presentation" class="headerDocument__user-img"/>
@@ -169,7 +170,7 @@
                     </div>
                 </div>
                 <div role="tabpanel" id="museumHistory" aria-hidden="true" tabindex="0" class="hidden js-tab-content">
-                    <p>
+                    <p class="text">
                         Государственный музей изобразительных искусств имени А.С. Пушкина – одно из крупнейших в России художественных собраний зарубежного искусства с древнейших времен до наших дней.
 
                     В современной экспозиции представлены обширная учебная коллекция тонированных гипсовых слепков с произведений Античности, Средних веков и эпохи Возрождения, а также собрание подлинных произведений живописи, скульптуры, графики и декоративно-прикладного искусства.
@@ -185,7 +186,7 @@
         <section id="visitors" class="layout">
             <h2>Онлайн-трансляции</h2>
             <div class="video layout">
-                <iframe class="video--iframe"
+                <iframe class="video--iframe" aria-labelledby="youtubeVideo"
                         src="https://www.youtube.com/embed/tgbNymZ7vqY">
                 </iframe>
             </div>
@@ -212,13 +213,13 @@
                 <a class="link link--padded" href="/law">Противодействие коррпции</a>
                 <h4>Соц. сети</h4>
                 <div class="navigation navigation--padded">
-                    <a href="mailto:test@email.com" class="link" target="_blank" aria-describedby="externalLink">
+                    <a href="mailto:test@email.com" class="link" target="_blank" aria-describedby="externalLink" aria-label="Отправить e-mail">
                         <img class="link--icon" src="/images/icon-post.png" alt="" role="presentation">
                     </a>
-                    <a class="link--icon" href="/telegram" class="link link--external" target="_blank" aria-describedby="externalLink">
+                    <a class="link--icon" href="/telegram" class="link link--external" target="_blank" aria-describedby="externalLink" aria-label="Написать нам в телеграм">
                         <img src="/images/icon-telegram.png" alt="" role="presentation">
                     </a>
-                    <a class="link--icon" href="facebook.com" class="link link--external" target="_blank" aria-describedby="externalLink">
+                    <a class="link--icon" href="facebook.com" class="link link--external" target="_blank" aria-describedby="externalLink" aria-label="Написать нам в фейсбук">
                         <img src="/images/icon-facebook.png" alt="" role="presentation">
                     </a>
                 </div>
@@ -228,7 +229,7 @@
                 <form class="js-form-subscribe subscribeForm">
                     <div class="subscribeForm__group">
                         <div>
-                            <input placeholder="E-mail" id="subscribeEmail" name="email" class="inputField inputField--decorated"/>
+                            <input placeholder="E-mail" id="subscribeEmail" name="email" class="inputField inputField--decorated" aria-describedby="subscribeEmail" aria-labelledby="emailField"/>
                             <div data-for="subscribeEmail" class="error inputField__error--short" aria-hidden="true" aria-live="polite"></div>
                         </div>
                         <button type="submit" class="btn">Подписаться</button>
@@ -260,6 +261,8 @@
         <span id="moreOnline">Узнать больше о виртуальных мероприятиях</span>
         <span id="donateLabel">Страница о спонсорстве для музея</span>
         <span id="loginModal">Окно ввода логина и пароля</span>
+        <span id="youtubeVideo">Видео контент</span>
+        <span id="emailField">Поле ввода электронной почты</span>
     </div>
     <!--Descriptions-->
     <div style="display: none">
