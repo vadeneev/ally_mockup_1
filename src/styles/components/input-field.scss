@@ -1,13 +1,6 @@
 .inputField {
   position: relative;
 
-  &:after {
-    // TODO: add zoom icon
-    content: url("./images/icon-zoom.png");
-    position: absolute;
-    right: 10px;
-  }
-
   &:focus-within, &:active {
     .inputField__label {
       top: -1.5rem;
